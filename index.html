@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Пухальская Ангелина | Современное портфолио</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Swiper CSS для слайдера -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Canvas particles layer -->
+  <div id="particle-canvas">
+    <canvas class="back"></canvas>
+    <canvas class="mid"></canvas>
+    <canvas class="front"></canvas>
+  </div>
+
+  <!-- custom cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <div class="main-content">
+    <!-- ШАПКА (фиксированная, прилипает сверху) -->
+    <header class="header-new" id="mainHeader">
+      <div class="header-new-container">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <span class="logo-symbol">✦</span>
+            <span class="logo-text">ANGELINA</span>
+          </a>
+        </div>
+
+        <nav class="nav-desktop">
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Главная</a></li>
+            <li><a href="#eduSection" class="nav-link">Образование</a></li>
+            <li><a href="#skills" class="nav-link">Навыки</a></li>
+            <li><a href="#projects" class="nav-link">Проекты</a></li>
+            <li><a href="#contact" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="theme-toggle-new" id="themeToggle">
+            <i class="fas fa-sun"></i>
+            <div class="toggle-track">
+              <div class="toggle-thumb"></div>
+            </div>
+            <i class="fas fa-moon"></i>
+          </div>
+          <a href="#contact" class="btn-hire">
+            <span>Связаться</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <button class="mobile-toggle" id="mobileToggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-menu">
+          <li><a href="#home" class="mobile-nav-link">Главная</a></li>
+          <li><a href="#eduSection" class="mobile-nav-link">Образование</a></li>
+          <li><a href="#skills" class="mobile-nav-link">Навыки</a></li>
+          <li><a href="#projects" class="mobile-nav-link">Проекты</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Контакты</a></li>
+        </ul>
+        <div class="mobile-cta">
+          <a href="#contact" class="btn-hire-mobile">Связаться →</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO СЕКЦИЯ с фотографией + описанием -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <div class="hero-grid">
+          <!-- Левая колонка: текст -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              ДОСТУПНА ДЛЯ СОТРУДНИЧЕСТВА
+            </div>
+            <h1 class="hero-title">
+              <span class="title-line">Привет, я</span>
+              <span class="title-line highlight">Пухальская Ангелина</span>
+            </h1>
+              <div class="hero-subtitle">
+              <span id="dynamicSubtitle"></span>
+               <!--<span class="hero-cursor">|</span>-->
+            </div>
+            <p class="hero-description">
+              Современный веб-дизайнер и разработчик. Создаю цифровые продукты, 
+              которые вдохновляют и решают реальные задачи пользователей.
+            </p>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="stat-num">15+</span>
+                <span class="stat-desc">проектов</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-num">3+</span>
+                <span class="stat-desc">года опыта</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">довольных клиентов</span>
+              </div>
+            </div>
+            <div class="hero-cta">
+              <a href="#projects" class="btn-primary">
+                <span>Смотреть проекты</span>
+                <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-paper-plane"></i>
+                <span>Написать</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Правая колонка: фотография -->
+          <div class="hero-photo">
+            <div class="photo-wrapper">
+              <div class="photo-glow"></div>
+              <img src="img/foto.jpg" alt="Ангелина Пухальская" class="profile-photo">
+              <div class="photo-decoration"></div>
+            </div>
+            <div class="photo-badge">
+              <i class="fas fa-check-circle"></i>
+              <span>Web Designer & Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cards-grid">
+        <!-- Образование -->
+        <section class="card-modern fade-up" id="eduSection">
+          <h2 class="section-title"><i class="fas fa-graduation-cap" style="margin-right: 12px;"></i> Образование</h2>
+          <ul class="edu-list">
+            <li><i class="fas fa-university" style="margin-right: 12px; color:#38bdf8;"></i>Сургутской политехнический колледж "Программирование в компьютерных системах"</li>
+            <li><i class="fas fa-code" style="margin-right: 12px; color:#38bdf8;"></i> Веб-дизайн и интерфейсы · Профессиональная переподготовка (2024)</li>
+            <li><i class="fas fa-palette" style="margin-right: 12px; color:#38bdf8;"></i> UI/UX интенсив: современные паттерны и прототипирование (2025)</li>
+          </ul>
+        </section>
+
+        <!-- Навыки -->
+        <section class="card-modern fade-up" id="skills">
+          <h2 class="section-title"><i class="fas fa-cogs" style="margin-right: 12px;"></i> Технологии & Инструменты</h2>
+          <div class="skills-flex">
+            <span class="skill-chip">HTML5 / CSS3</span>
+            <span class="skill-chip">JavaScript (ES6+)</span>
+            <span class="skill-chip">React / Vue</span>
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">GSAP / Анимации</span>
+            <span class="skill-chip">Adobe Creative Suite</span>
+            <span class="skill-chip">Адаптивный дизайн</span>
+            <span class="skill-chip">UI/UX Research</span>
+          </div>
+        </section>
+
+        <!-- ПРОЕКТЫ - СЛАЙДЕР КАРУСЕЛЬ -->
+        <section class="card-modern fade-up" id="projects">
+          <h2 class="section-title"><i class="fas fa-rocket" style="margin-right: 12px;"></i> Избранные проекты</h2>
+          
+          <!-- Swiper -->
+          <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
+              <!-- Слайд 1 -->
+              <div class="swiper-slide">
+                <div class="project-slide">
+                  <div class="project-slide-image">
+                    <img src="img/project4.png" alt="Identity 2026">
+                    <div class="project-overlay">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                  </div>
+                  <div class="project-slide-info">
+                    <h3>Identity 2026</h3>
+                    <p>Минималистичное портфолио с фокусом на типографику и микроинтеракции.</p>
+                    <div class="project-tags">
+                      <span>#HTML/CSS/JS</span>
+                      <span>#Branding</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Слайд 2 -->
+              <div class="swiper-slide">
+                <div class="project-slide">
+                  <div class="project-slide-image">
+                    <img src="img/project1.jpg" alt="Flowspace App">
+                    <div class="project-overlay">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                  </div>
+                  <div class="project-slide-info">
+                    <h3>Flowspace App</h3>
+                    <p>UX-дизайн приложения для управления задачами. Прототип в Figma + анимированный UI.</p>
+                    <div class="project-tags">
+                      <span>#Figma</span>
+                      <span>#UI/UX</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Слайд 3 -->
+              <div class="swiper-slide">
+                <div class="project-slide">
+                  <div class="project-slide-image">
+                    <img src="img/project3.png" alt="Nebula Studio">
+                    <div class="project-overlay">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                  </div>
+                  <div class="project-slide-info">
+                    <h3>Nebula Studio</h3>
+                    <p>Креативный лендинг для digital-агентства с параллаксом и 3D-сценой.</p>
+                    <div class="project-tags">
+                      <span>#GSAP</span>
+                      <span>#ThreeJS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Слайд 4 -->
+              <div class="swiper-slide">
+                <div class="project-slide">
+                  <div class="project-slide-image">
+                    <img src="img/project2.jpg" alt="Eco Brand">
+                    <div class="project-overlay">
+                      <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                  </div>
+                  <div class="project-slide-info">
+                    <h3>Eco Brand Identity</h3>
+                    <p>Полный брендинг для экологического стартапа: логотип, сайт, соцсети.</p>
+                    <div class="project-tags">
+                      <span>#Branding</span>
+                      <span>#WebDesign</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Пагинация и навигация -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+
+        <!-- Доп информация -->
+        <section class="card-modern extra-section fade-up">
+          <h2 class="section-title"><i class="fas fa-star-of-life" style="margin-right: 12px;"></i> Дополнительно</h2>
+          <p>✨ Создаю чистый, современный дизайн с душой. Постоянно изучаю тренды: нейросети в дизайне, анимации интерфейсов, микровзаимодействия.</p>
+          <div class="achievements">
+            <span><i class="fas fa-trophy" style="color:#fbbf24;"></i> Финалист «Digital Design 2025»</span>
+            <span><i class="fas fa-certificate"></i> Сертификат Google UX Design</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="footer-content-new">
+        <div class="footer-brand">
+          <span class="footer-logo">✦ ANGELINA</span>
+          <p>Современный веб-дизайн и разработка</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Пухальская Ангелина · +7 (29) 123-45-67 · 2026 </p>
+        <p>Сделанно в deepseek за 7 часов, реализована анимация фона<p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal для увеличения изображений -->
+  <div id="imageOverlay" class="expanded-img-overlay">
+    <img id="expandedImg" src="" alt="preview">
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
